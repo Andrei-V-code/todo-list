@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.TodoList {
+  margin: 4rem auto;
+  padding: 2rem 3rem 1rem;
+  max-width: 500px;
+  background: #d6ccc2;
+  color: #fff;
+  box-shadow: 10px 10px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+.Todos {
+  margin: 0;
+  font-size: 50px;
+  color: #e29578;
+}
+
+.Todo {
+  display: flex;
+  margin: 0 -1rem 4px;
+  padding: 1.1rem;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.Todo-edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Todo-button {
+  display: flex;
+}
+
+.TextTodo {
+  font-size: 30px;
+}
+
+.Hero {
+  font-size: 17px;
+  color: dimgray;
+}
+
+.MainList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 19px 0 0;
+}
+
+.MainList li {
+  cursor: pointer;
+}
+
+.ChildList {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.ChildList li {
+  cursor: pointer;
+}
