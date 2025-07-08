@@ -28,9 +28,9 @@ export const todosSlice = createSlice({
       state.todos = editTodo;
     },
     deleteTodo: (state, action) => {
-      const newArr = state.todos.filter(el => el.name !== action.payload);
+      const newArr = state.todos.filter(el => el.name !== action.payload.name);
       state.todos = newArr;
-      state.itemsLeft = state.itemsLeft - 1;
+      !action.payload.completed ? state.itemsLeft = state.itemsLeft - 1 : state.itemsLeft;
     },
     completedTodo: (state, action) => {
       const completedElement = state.todos.map(todo => {

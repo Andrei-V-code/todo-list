@@ -10,10 +10,6 @@
 
 # Установка и запуск
 
-Если ты впервые скачиваешь что-либо с *https://github.com/*, то тебе необходимо:
-1. [Node.js](https://nodejs.org/en) - Установит в Windows `Node` и `npm`;
-2. [VSCode](https://code.visualstudio.com/) - абсолютно бесплатная среда разработки от `Microsoft`;
-
 `npm i && npm run start` - эта команда установит все зависимости проекта и запустит его локально
 
 Good luck :smiley:

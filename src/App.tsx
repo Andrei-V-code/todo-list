@@ -5,6 +5,7 @@ import TodoHero from "./components/TodoHero";
 import { useAppDispatch, useAppSelector } from "./redux/store";
 import { addTodo, completedTodo, deleteTodo, editTodo, itemLeft } from "./redux/slices/todosSlice";
 import { selectFilteredTodos } from "./redux/selectors";
+import { TodoItem } from "./types/types";
 import './App.css';
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
     dispatch(itemLeft({completed}))
   }
   
-  const onDeleteTodo = (name: string) => {
-    dispatch(deleteTodo(name));
+  const onDeleteTodo = (item: TodoItem) => {
+    dispatch(deleteTodo(item));
   }
 
   const onUpdateTodo = (id: number, task: string) => {
@@ -49,7 +50,7 @@ function App() {
               <Todo
                 el={el}
                 completedTodo={(id, completed) => onCompletedTodo(id, completed)}
-                deleteTodo={(name) => onDeleteTodo(name)}
+                deleteTodo={(item) => onDeleteTodo(item)}
                 updateTodo={(id, item) => onUpdateTodo(id, item)}
               />
             </List>

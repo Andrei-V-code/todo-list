@@ -1,19 +1,19 @@
-export type Todo = {
+export type TodoItem = {
     name: string;
     id: number;
     completed: boolean;
 }
 
 export type Todos = {
-    todos: Todo[];
+    todos: TodoItem[];
     itemsLeft: number; 
     status: string
 }
 
 export type TodoProps = {
-    el: Todo;
+    el: TodoItem;
     completedTodo: (id: number, completed: boolean) => void;
-    deleteTodo: (item: string) => void;
+    deleteTodo: (item: TodoItem) => void;
     updateTodo: (id: number, updateTask: string) => void;
 }
 

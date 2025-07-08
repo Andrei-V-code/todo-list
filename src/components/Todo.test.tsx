@@ -59,9 +59,9 @@ describe("tests for TodoSlice", () => {
     })
     
     test("delete todo", () => {
-        expect(store.dispatch(deleteTodo("Run the tests")));
+        expect(store.dispatch(deleteTodo({ completed: false, id: 0, name: "Run the tests" })));
         expect(store.getState().todos.todos).toHaveLength(1);
-        expect(store.dispatch(deleteTodo("Edit item" )));
+        expect(store.dispatch(deleteTodo({ completed: false, id: 1, name: "Edit item" })));
         expect(store.getState().todos.todos).toHaveLength(0);
     });
 })

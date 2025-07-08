@@ -88,7 +88,7 @@ function Todo({ el, completedTodo, deleteTodo, updateTodo }: TodoProps) {
                                     <IconButton
                                         aria-label="Delete"
                                         onClick={() => {
-                                            deleteTodo(el.name);
+                                            deleteTodo(el);
                                         }}
                                     >
                                         <DeleteIcon fontSize="large" />
